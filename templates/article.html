@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Статья</title>
+</head>
+<body>
+    <h1>{{ article.article_title }}</h1><br>
+    <img src="{{ article.article_image.url }}" style="width: 600px" alt="фото"><br>
+    <h3>
+        <a class="bg-orange" href="/category/{{ article.article_categories.id }}" title="">
+            {{ article.article_categories }}
+        </a>
+    </h3>
+    <br>
+    <p>{{ article.article_news }}</p><br>
+    <h4>{{ article.article_author }}</h4><br>
+    <h4>{{ article.article_created_at }}</h4><br>
+    <a href="{% url 'edit' article.id %}">Изменить</a> | <a href="{% url 'delete' article.id %}">Удалить</a>
+
+</body>
+</html>

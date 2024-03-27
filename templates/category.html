@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Категория</title>
+</head>
+<body>
+{% for i in article %}
+<ul>
+    <li>
+        <a href="/articles/{{ i.id }}">{{ i.article_title }}</a><br>
+    </li>
+</ul>
+{% endfor %}
+</body>
+</html>
