@@ -39,7 +39,7 @@ def article_page(request, pk):
 
 def category_page(request, pk):
     category = NewModel.objects.get(id=pk)
-    current_articles = NewsModel.objects.filter(article_categories=category)
+    current_articles = NewsModel.objects.filter(news_categories=category)
     context = {'article': current_articles}
     return render(request, 'category.html', context)
 
